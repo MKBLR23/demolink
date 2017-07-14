@@ -1,0 +1,274 @@
+/*
+
+	1 - LAYOUT
+
+		1.1 - Header
+		1.2 - Content
+		1.3 - Footer
+
+*/
+
+/*===============================================
+
+	L A Y O U T
+	Layout styles
+
+===============================================*/
+
+/*
+	Hierarchy:
+
+	#layout
+	| #header
+	| | #header-layout
+	| | | #header-holder
+	| | | | #logo
+	| | | | #hcustom
+	| | | | ...
+	| #content
+	| | #content-layout
+	| | | #content-holder
+	| | | | #content-box
+	| | | | | div
+	| | | | | | div
+	| | | | | | | ...
+	| | | | #sidebar
+	| | | | | ...
+	| #footer
+	| | #footer-layout
+	| | | #footer-holder
+	| | | | #footer-box
+	| | | | | .sidebar-footer
+	| | | | | | ...
+	| | | #copyrights-holder
+	| | | | #copyrights-box
+*/
+
+#layout {
+	max-width: 100%;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.customLogo{
+	font-size: 5.7em;
+	font-weight: bold;
+	padding: 0.15em 0;
+	line-height: 175%;
+    color: #FFF !important;
+}
+.customLogo a{
+	color: #FFF;
+}
+	/*-------------------------------------------
+		1.1 - Header
+	-------------------------------------------*/
+
+	#header {
+		position: relative;
+		z-index: 3;
+	}
+
+		#header-layout {
+		}
+	
+			#header-holder {
+				position: relative;
+				display: block;
+				width: 1200px;
+				text-align: center;
+				color: #CCC;
+				margin: 0 auto;
+				padding: 20px 0;
+			}
+			.st_icon_box h3 {
+				font-size: 1em;
+				font-weight: bold;
+				padding: 0.15em 0;
+				color: black;
+			}
+
+				/*--- Logo -----------------------------*/
+
+				#logo {
+					display: inline-block;
+					width: 320px;
+				}
+
+					#logo > div {
+						height: 90px;
+						margin: 0 auto;
+					}
+
+						#logo > div > div {
+						}
+
+							#logo h2,
+							#logo h2 a,
+							#logo h2 img {
+								position: relative;
+								display: block;
+								font-size: 36px;
+								line-height: 0.9em;
+								font-weight: 300;
+								color: #FFF;
+								letter-spacing: -0.02em;
+								text-decoration: none;
+								max-width: 300px;
+								margin: 0;
+								padding: 0;
+							}
+		
+								#logo h2 {
+								}
+
+									#logo h2#st-logo-text {
+									}
+
+										.hidpi #logo h2 img {
+											opacity: 0;
+										}
+
+										#logo h2 strong {
+											font-weight: bold;
+										}
+
+
+				/*--- Custom data -----------------------------*/
+
+				#hcustom {
+					height: 67px;
+					float: right;
+				}
+
+					#hcustom a {
+						color: #FFF;
+					}
+
+
+	/*-------------------------------------------
+		1.2 - Content
+	-------------------------------------------*/
+
+	#content {
+		z-index: 1;
+		position: relative;
+	}
+
+		#content-layout {
+			max-width: 1250px;
+			margin: 0 auto;
+			background: #F5F5F5;
+		}
+
+			body:not(.home) #content-layout {
+				border-radius: 4px 4px 0 0;
+			}
+	
+				#content-holder {
+					display: block;
+					width: 1200px;
+					margin: 0 auto;
+					padding: 0;
+					z-index: 1;
+				}
+	
+					#content-box {
+						min-height: 500px;
+					}
+	
+						/* Content area */
+						div.post-single {
+							width: 667px;
+						}
+	
+						/* If sidebar by right */
+						.sidebar-position-right #content-box {
+							float: left;
+							width: 888px;
+						}
+		
+							.sidebar-position-right #content-box > div {
+								padding: 50px 51px 50px 0;
+								background: url('../images/line.png') right top repeat-y;
+							}
+	
+								.sidebar-position-right div.post-single {
+									float: right;
+								}
+	
+						/* If sidebar by left */
+						.sidebar-position-left #content-box {
+							float: right;
+							width: 888px;
+						}
+						
+							.sidebar-position-left #content-box > div {
+								padding: 50px 0 51px 51px;
+								background: url('../images/line.png') left top repeat-y;
+							}
+	
+								.sidebar-position-left div.post-single {
+									float: left;
+								}
+	
+						/* If sidebar none */						
+						.sidebar-position-none #content-box > div {
+							padding: 50px 0;
+						}
+	
+							.sidebar-position-none div.post-single {
+								float: right;
+								width: 1030px;
+							}
+
+
+	/*-------------------------------------------
+		1.3 - Footer
+	-------------------------------------------*/
+
+	#footer {
+		position: relative;
+		padding-bottom: 100px;
+	}
+	
+		#footer-layout {
+			max-width: 1300px;
+			margin: 0 auto;
+			background: #FFF;
+			border-radius: 0 0 4px 4px;
+		}
+		
+			#footer-holder {
+				position: relative;
+				width: 1200px;
+				margin: 0 auto;
+				z-index: 2;
+			}
+	
+	
+	#copyrights-holder {
+		padding: 10px 0;
+		background: url('../images/line-light.png') top left repeat-x;
+	}
+	
+		#copyrights-box {
+			width: 1200px;
+			margin: 0 auto;
+		}
+
+			#copyrights-box a:hover {
+			}
+	
+			#copyrights-company {
+				font-size: 12px;
+				width: 65%;
+				float: left;
+			}
+			
+			#copyrights-developer {
+				font-size: 12px;
+				width: 35%;
+				float: right;
+				text-align: right;
+			}

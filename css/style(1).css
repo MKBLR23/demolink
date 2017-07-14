@@ -1,0 +1,25 @@
+/* 
+Theme Name: ST Attitude
+Theme URI: http://strictthemes.com
+Author: StrictThemes
+Author URI: http://strictthemes.com
+Description: Media portfolio + Blog
+Version: 1.1.0
+License: GPL2
+License URI: http://strictthemes.com/licensing/
+Tags: light, dark, theme-options, translation-ready, custom-background, custom-colors, two-columns, three-columns, left-sidebar, right-sidebar, fluid-layout, featured-images, custom-menu, post-formats, sticky-post
+Text Domain: strictthemes
+*/
+
+@import "reset.css";
+@import "common.css";
+@import "layout.css";
+@import "special.css";
+@import "menu.css";
+@import "forms.css";
+@import "sidebars.css";
+@import "posts.css";
+@import "comments.css";
+@import "widgets.css";
+@import "icons.css";
+@import "pagination.css";
