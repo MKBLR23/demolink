@@ -479,3 +479,7 @@ html {
 		color: #FFF;
 		background: #E0735E;
 	}
+
+	.st-tabs-holder{
+		width: 100% !important;
+	}
